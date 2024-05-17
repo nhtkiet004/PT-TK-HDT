@@ -21,6 +21,7 @@ namespace SelfRestaurant.GUI
             InitializeComponent();
             this.conn = conn;
             this.pass = pass;
+            timer1.Start();
         }
         void loadTable()
         {
@@ -383,6 +384,16 @@ namespace SelfRestaurant.GUI
         private void cbGiamGia_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTime.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

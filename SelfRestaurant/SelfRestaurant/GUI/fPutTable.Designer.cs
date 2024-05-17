@@ -35,16 +35,16 @@
             this.clDonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHoaDonGop = new System.Windows.Forms.DataGridView();
-            this.lbBan = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbGop = new System.Windows.Forms.ComboBox();
-            this.btnGop = new System.Windows.Forms.Button();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbBan = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbGop = new System.Windows.Forms.ComboBox();
+            this.btnGop = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonGop)).BeginInit();
             this.SuspendLayout();
@@ -65,12 +65,14 @@
             this.dgvHoaDon.Name = "dgvHoaDon";
             this.dgvHoaDon.ReadOnly = true;
             this.dgvHoaDon.RowHeadersVisible = false;
+            this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.Size = new System.Drawing.Size(494, 284);
             this.dgvHoaDon.TabIndex = 11;
             // 
             // clSTT
             // 
             this.clSTT.HeaderText = "STT";
+            this.clSTT.MinimumWidth = 6;
             this.clSTT.Name = "clSTT";
             this.clSTT.ReadOnly = true;
             this.clSTT.Width = 50;
@@ -79,6 +81,7 @@
             // 
             this.clTenMon.DataPropertyName = "TenMonAn";
             this.clTenMon.HeaderText = "Tên";
+            this.clTenMon.MinimumWidth = 6;
             this.clTenMon.Name = "clTenMon";
             this.clTenMon.ReadOnly = true;
             this.clTenMon.Width = 150;
@@ -87,6 +90,7 @@
             // 
             this.clSoLuong.DataPropertyName = "SoLuong";
             this.clSoLuong.HeaderText = "Số lượng";
+            this.clSoLuong.MinimumWidth = 6;
             this.clSoLuong.Name = "clSoLuong";
             this.clSoLuong.ReadOnly = true;
             this.clSoLuong.Width = 90;
@@ -95,15 +99,19 @@
             // 
             this.clDonGia.DataPropertyName = "DonGia";
             this.clDonGia.HeaderText = "Đơn Giá";
+            this.clDonGia.MinimumWidth = 6;
             this.clDonGia.Name = "clDonGia";
             this.clDonGia.ReadOnly = true;
+            this.clDonGia.Width = 125;
             // 
             // clThanhTien
             // 
             this.clThanhTien.DataPropertyName = "ThanhTien";
             this.clThanhTien.HeaderText = "Thành tiền";
+            this.clThanhTien.MinimumWidth = 6;
             this.clThanhTien.Name = "clThanhTien";
             this.clThanhTien.ReadOnly = true;
+            this.clThanhTien.Width = 125;
             // 
             // dgvHoaDonGop
             // 
@@ -121,8 +129,53 @@
             this.dgvHoaDonGop.Name = "dgvHoaDonGop";
             this.dgvHoaDonGop.ReadOnly = true;
             this.dgvHoaDonGop.RowHeadersVisible = false;
+            this.dgvHoaDonGop.RowHeadersWidth = 51;
             this.dgvHoaDonGop.Size = new System.Drawing.Size(494, 284);
             this.dgvHoaDonGop.TabIndex = 12;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            this.STT.Width = 50;
+            // 
+            // TenMon
+            // 
+            this.TenMon.DataPropertyName = "TenMonAn";
+            this.TenMon.HeaderText = "Tên";
+            this.TenMon.MinimumWidth = 6;
+            this.TenMon.Name = "TenMon";
+            this.TenMon.ReadOnly = true;
+            this.TenMon.Width = 150;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            this.SoLuong.Width = 90;
+            // 
+            // DonGia
+            // 
+            this.DonGia.DataPropertyName = "DonGia";
+            this.DonGia.HeaderText = "Đơn Giá";
+            this.DonGia.MinimumWidth = 6;
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            this.DonGia.Width = 125;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            this.ThanhTien.Width = 125;
             // 
             // lbBan
             // 
@@ -143,7 +196,7 @@
             this.label4.Location = new System.Drawing.Point(3, 44);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 17);
+            this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Từ bàn:";
             // 
@@ -153,7 +206,7 @@
             this.label1.Location = new System.Drawing.Point(513, 223);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 17);
+            this.label1.Size = new System.Drawing.Size(40, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "Gộp";
             // 
@@ -163,7 +216,7 @@
             this.cbGop.FormattingEnabled = true;
             this.cbGop.Location = new System.Drawing.Point(636, 46);
             this.cbGop.Name = "cbGop";
-            this.cbGop.Size = new System.Drawing.Size(167, 24);
+            this.cbGop.Size = new System.Drawing.Size(167, 28);
             this.cbGop.TabIndex = 15;
             this.cbGop.SelectedIndexChanged += new System.EventHandler(this.cbGop_SelectedIndexChanged);
             // 
@@ -181,46 +234,9 @@
             this.btnGop.UseVisualStyleBackColor = false;
             this.btnGop.Click += new System.EventHandler(this.btnGop_Click);
             // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
-            this.STT.Width = 50;
-            // 
-            // TenMon
-            // 
-            this.TenMon.DataPropertyName = "TenMonAn";
-            this.TenMon.HeaderText = "Tên";
-            this.TenMon.Name = "TenMon";
-            this.TenMon.ReadOnly = true;
-            this.TenMon.Width = 150;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            this.SoLuong.Width = 90;
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DonGia";
-            this.DonGia.HeaderText = "Đơn Giá";
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
-            // 
             // fPutTable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1058, 393);

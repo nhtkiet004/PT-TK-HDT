@@ -33,7 +33,6 @@ CREATE TABLE [dbo].[BAN](
 	[TongCong] [float] NOT NULL,
 	[ID] [INT] NOT NULL,
 	CONSTRAINT fk_KV FOREIGN KEY (ID) REFERENCES KHUVUC(ID)
-	CONSTRAINT fk_LS FOREIGN KEY (TenBan) REFERENCES LICHSU(TenBan)
 )
 GO
 CREATE TABLE [dbo].[HOADON](
@@ -72,7 +71,7 @@ GO
 CREATE TABLE [dbo].[LICHSU]
 (
 KhuVuc nvarchar(100) not null,
-TenBan nvarchar(100) not null PRIMARY KEY,
+TenBan nvarchar(100) not null,
 Ngay date not null,
 ThoiGian time not null,
 TongCong float not null,
@@ -140,20 +139,20 @@ INSERT [dbo].[THUCDON] VALUES (N'Mực xào trứng',50000,N'Đĩa',1)
 INSERT [dbo].[THUCDON] VALUES (N'Sò điệp hấp lá dứa',57000,N'Đĩa',1)
 INSERT [dbo].[THUCDON] VALUES (N'Lươn xào lăn',45000,N'Đĩa',1)
 INSERT [dbo].[THUCDON] VALUES (N'Rau muống luộc',10000,N'Đĩa',2)
-INSERT [dbo].[THUCDON] VALUES (N'Thịt gà xả ớt',15000,N'Đĩa',2)
-INSERT [dbo].[THUCDON] VALUES (N'Xườn xào chưa ngọt',25000,N'Đĩa',2)
-INSERT [dbo].[THUCDON] VALUES (N'Thịt kho tàu',35000,N'Đĩa',2)
-INSERT [dbo].[THUCDON] VALUES (N'Thịt nướng',40000,N'Đĩa',2)
-INSERT [dbo].[THUCDON] VALUES (N'Pepsi',5000,N'Chai',3)
+INSERT [dbo].[THUCDON] VALUES (N'Thịt gà xả ớt',25000,N'Đĩa',2)
+INSERT [dbo].[THUCDON] VALUES (N'Xườn xào chưa ngọt',30000,N'Đĩa',2)
+INSERT [dbo].[THUCDON] VALUES (N'Thịt kho tàu',45000,N'Đĩa',2)
+INSERT [dbo].[THUCDON] VALUES (N'Thịt nướng',55000,N'Đĩa',2)
+INSERT [dbo].[THUCDON] VALUES (N'Pepsi',15000,N'Chai',3)
 INSERT [dbo].[THUCDON] VALUES (N'Cocacola',15000,N'Lon',3)
 INSERT [dbo].[THUCDON] VALUES (N'Cafe',15000,N'Ly',3)
-INSERT [dbo].[THUCDON] VALUES (N'Sting',10000,N'Chai',3)
-INSERT [dbo].[THUCDON] VALUES (N'Wake up 247',10000,N'Chai',3)
+INSERT [dbo].[THUCDON] VALUES (N'Sting',15000,N'Chai',3)
+INSERT [dbo].[THUCDON] VALUES (N'Wake up 247',15000,N'Chai',3)
 INSERT [dbo].[THUCDON] VALUES (N'Xoài',15000,N'Đĩa',4)
 INSERT [dbo].[THUCDON] VALUES (N'Táo',10000,N'Đĩa',4)
 INSERT [dbo].[THUCDON] VALUES (N'Lê',15000,N'Đĩa',4)
-INSERT [dbo].[THUCDON] VALUES (N'Dưa hấu',8000,N'Đĩa',4)
-INSERT [dbo].[THUCDON] VALUES (N'Lựu',9000,N'Đĩa',4)
+INSERT [dbo].[THUCDON] VALUES (N'Dưa hấu',20000,N'Đĩa',4)
+INSERT [dbo].[THUCDON] VALUES (N'Lựu',25000,N'Đĩa',4)
 end
 GO
 BEGIN --Loại tài khoản

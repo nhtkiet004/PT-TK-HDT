@@ -98,5 +98,10 @@ namespace SelfRestaurant.GUI
                 }
             }
         }
+
+        private void fUpdate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

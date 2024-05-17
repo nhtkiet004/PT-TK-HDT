@@ -109,5 +109,10 @@ namespace SelfRestaurant.GUI
                 fFood_Load(sender, e);
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

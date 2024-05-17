@@ -88,7 +88,11 @@ namespace SelfRestaurant.GUI
                 MessageBox.Show("Kết nối thất bại!", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

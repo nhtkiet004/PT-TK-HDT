@@ -32,12 +32,18 @@ namespace SelfRestaurant.GUI
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.Menu = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýDanhSáchBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýThựcĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lịchSửThanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTable = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -64,10 +70,12 @@ namespace SelfRestaurant.GUI
             this.label12 = new System.Windows.Forms.Label();
             this.cbPhuPhi = new System.Windows.Forms.ComboBox();
             this.cbGiamGia = new System.Windows.Forms.ComboBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.date = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
@@ -77,38 +85,31 @@ namespace SelfRestaurant.GUI
             this.lbTime = new System.Windows.Forms.Label();
             this.lbTrangThai = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnKhoa = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.CMSTrong = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.CMSCoNguoi = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.CMSDatTruoc = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnKhoa = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnThanhToan = new System.Windows.Forms.Button();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýDanhSáchBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýThựcĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lịchSửThanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đặtGiữBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CMSCoNguoi = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.thêmMónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.trảMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chuyểnBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gộpBànToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inThửHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CMSDatTruoc = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.mToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Menu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -149,11 +150,56 @@ namespace SelfRestaurant.GUI
             this.Menu.TabIndex = 0;
             this.Menu.Text = "menuStrip1";
             // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quảnLýNhânViênToolStripMenuItem,
+            this.quảnLýDanhSáchBànToolStripMenuItem,
+            this.quảnLýThựcĐơnToolStripMenuItem});
+            this.menuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menuToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources.matt_icons_contact_add;
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(109, 27);
+            this.menuToolStripMenuItem.Text = "Quản Trị";
+            // 
+            // quảnLýNhânViênToolStripMenuItem
+            // 
+            this.quảnLýNhânViênToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources.multy_user;
+            this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
+            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(270, 28);
+            this.quảnLýNhânViênToolStripMenuItem.Text = "Quản lý nhân viên";
+            this.quảnLýNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNhânViênToolStripMenuItem_Click);
+            // 
+            // quảnLýDanhSáchBànToolStripMenuItem
+            // 
+            this.quảnLýDanhSáchBànToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources._51882;
+            this.quảnLýDanhSáchBànToolStripMenuItem.Name = "quảnLýDanhSáchBànToolStripMenuItem";
+            this.quảnLýDanhSáchBànToolStripMenuItem.Size = new System.Drawing.Size(270, 28);
+            this.quảnLýDanhSáchBànToolStripMenuItem.Text = "Quản lý danh sách bàn";
+            this.quảnLýDanhSáchBànToolStripMenuItem.Click += new System.EventHandler(this.quảnLýDanhSáchBànToolStripMenuItem_Click);
+            // 
+            // quảnLýThựcĐơnToolStripMenuItem
+            // 
+            this.quảnLýThựcĐơnToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources.table;
+            this.quảnLýThựcĐơnToolStripMenuItem.Name = "quảnLýThựcĐơnToolStripMenuItem";
+            this.quảnLýThựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(270, 28);
+            this.quảnLýThựcĐơnToolStripMenuItem.Text = "Quản lý thực đơn";
+            this.quảnLýThựcĐơnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýThựcĐơnToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(28, 27);
             this.toolStripMenuItem2.Text = "|";
+            // 
+            // lịchSửThanhToánToolStripMenuItem
+            // 
+            this.lịchSửThanhToánToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lịchSửThanhToánToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources.Numbers_iOS_svg_;
+            this.lịchSửThanhToánToolStripMenuItem.Name = "lịchSửThanhToánToolStripMenuItem";
+            this.lịchSửThanhToánToolStripMenuItem.Size = new System.Drawing.Size(186, 27);
+            this.lịchSửThanhToánToolStripMenuItem.Text = "Lịch sử thanh toán";
+            this.lịchSửThanhToánToolStripMenuItem.Click += new System.EventHandler(this.lịchSửThanhToánToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -184,6 +230,15 @@ namespace SelfRestaurant.GUI
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(28, 27);
             this.toolStripMenuItem6.Text = "|";
+            // 
+            // thoátToolStripMenuItem
+            // 
+            this.thoátToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.thoátToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources._2013_06_13_televizija_na_off_16377;
+            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
+            this.thoátToolStripMenuItem.Text = "Đăng xuất";
+            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
             // pnlTable
             // 
@@ -455,7 +510,7 @@ namespace SelfRestaurant.GUI
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Location = new System.Drawing.Point(417, 82);
+            this.label14.Location = new System.Drawing.Point(411, 82);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(86, 20);
             this.label14.TabIndex = 4;
@@ -467,7 +522,7 @@ namespace SelfRestaurant.GUI
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Location = new System.Drawing.Point(299, 83);
+            this.label12.Location = new System.Drawing.Point(302, 83);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(92, 20);
             this.label12.TabIndex = 4;
@@ -499,6 +554,20 @@ namespace SelfRestaurant.GUI
             this.cbGiamGia.Size = new System.Drawing.Size(77, 28);
             this.cbGiamGia.TabIndex = 3;
             this.cbGiamGia.SelectedIndexChanged += new System.EventHandler(this.cbGiamGia_SelectedIndexChanged);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.BackgroundImage = global::SelfRestaurant.Properties.Resources.Print_icon;
+            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Location = new System.Drawing.Point(421, 22);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(64, 60);
+            this.btnPrint.TabIndex = 0;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // label6
             // 
@@ -544,6 +613,23 @@ namespace SelfRestaurant.GUI
             this.numericUpDown1.TabIndex = 1;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.Color.Transparent;
+            this.btnThanhToan.BackgroundImage = global::SelfRestaurant.Properties.Resources.SQUARE_CASH;
+            this.btnThanhToan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThanhToan.ImageIndex = 0;
+            this.btnThanhToan.Location = new System.Drawing.Point(327, 22);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(64, 60);
+            this.btnThanhToan.TabIndex = 0;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -568,6 +654,7 @@ namespace SelfRestaurant.GUI
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin bàn đang phục vụ";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // date
             // 
@@ -660,6 +747,20 @@ namespace SelfRestaurant.GUI
             this.label13.Text = "Trực:";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
+            // btnKhoa
+            // 
+            this.btnKhoa.BackColor = System.Drawing.Color.Transparent;
+            this.btnKhoa.BackgroundImage = global::SelfRestaurant.Properties.Resources.shield_lock;
+            this.btnKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnKhoa.FlatAppearance.BorderSize = 0;
+            this.btnKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhoa.Location = new System.Drawing.Point(391, 115);
+            this.btnKhoa.Name = "btnKhoa";
+            this.btnKhoa.Size = new System.Drawing.Size(55, 46);
+            this.btnKhoa.TabIndex = 2;
+            this.btnKhoa.UseVisualStyleBackColor = false;
+            this.btnKhoa.Click += new System.EventHandler(this.btnKhoa_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -717,164 +818,6 @@ namespace SelfRestaurant.GUI
             this.CMSTrong.Name = "CMSTrong";
             this.CMSTrong.Size = new System.Drawing.Size(175, 60);
             // 
-            // CMSCoNguoi
-            // 
-            this.CMSCoNguoi.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CMSCoNguoi.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.CMSCoNguoi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thêmMónToolStripMenuItem1,
-            this.trảMónToolStripMenuItem,
-            this.chuyểnBànToolStripMenuItem,
-            this.gộpBànToolStripMenuItem,
-            this.toolStripMenuItem3,
-            this.thanhToánToolStripMenuItem,
-            this.inThửHóaĐơnToolStripMenuItem});
-            this.CMSCoNguoi.Name = "CMSCoNguoi";
-            this.CMSCoNguoi.Size = new System.Drawing.Size(200, 178);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(196, 6);
-            // 
-            // CMSDatTruoc
-            // 
-            this.CMSDatTruoc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.CMSDatTruoc.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.CMSDatTruoc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4,
-            this.mToolStripMenuItem});
-            this.CMSDatTruoc.Name = "CMSDatTruoc";
-            this.CMSDatTruoc.Size = new System.Drawing.Size(186, 60);
-            // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.pnlTable);
-            this.panel3.Controls.Add(this.groupBox3);
-            this.panel3.Location = new System.Drawing.Point(12, 268);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(386, 419);
-            this.panel3.TabIndex = 12;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::SelfRestaurant.Properties.Resources.SeflRestaurant;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(386, 222);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnKhoa
-            // 
-            this.btnKhoa.BackColor = System.Drawing.Color.Transparent;
-            this.btnKhoa.BackgroundImage = global::SelfRestaurant.Properties.Resources.shield_lock;
-            this.btnKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnKhoa.FlatAppearance.BorderSize = 0;
-            this.btnKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhoa.Location = new System.Drawing.Point(391, 115);
-            this.btnKhoa.Name = "btnKhoa";
-            this.btnKhoa.Size = new System.Drawing.Size(55, 46);
-            this.btnKhoa.TabIndex = 2;
-            this.btnKhoa.UseVisualStyleBackColor = false;
-            this.btnKhoa.Click += new System.EventHandler(this.btnKhoa_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
-            this.btnPrint.BackgroundImage = global::SelfRestaurant.Properties.Resources.Print_icon;
-            this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Location = new System.Drawing.Point(421, 22);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(64, 60);
-            this.btnPrint.TabIndex = 0;
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnThanhToan
-            // 
-            this.btnThanhToan.BackColor = System.Drawing.Color.Transparent;
-            this.btnThanhToan.BackgroundImage = global::SelfRestaurant.Properties.Resources.SQUARE_CASH;
-            this.btnThanhToan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThanhToan.FlatAppearance.BorderSize = 0;
-            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThanhToan.ImageIndex = 0;
-            this.btnThanhToan.Location = new System.Drawing.Point(327, 22);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(64, 60);
-            this.btnThanhToan.TabIndex = 0;
-            this.btnThanhToan.UseVisualStyleBackColor = false;
-            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
-            // 
-            // menuToolStripMenuItem
-            // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quảnLýNhânViênToolStripMenuItem,
-            this.quảnLýDanhSáchBànToolStripMenuItem,
-            this.quảnLýThựcĐơnToolStripMenuItem});
-            this.menuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.menuToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources.matt_icons_contact_add;
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(109, 27);
-            this.menuToolStripMenuItem.Text = "Quản Trị";
-            // 
-            // quảnLýNhânViênToolStripMenuItem
-            // 
-            this.quảnLýNhânViênToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources.multy_user;
-            this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
-            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(270, 28);
-            this.quảnLýNhânViênToolStripMenuItem.Text = "Quản lý nhân viên";
-            this.quảnLýNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNhânViênToolStripMenuItem_Click);
-            // 
-            // quảnLýDanhSáchBànToolStripMenuItem
-            // 
-            this.quảnLýDanhSáchBànToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources._51882;
-            this.quảnLýDanhSáchBànToolStripMenuItem.Name = "quảnLýDanhSáchBànToolStripMenuItem";
-            this.quảnLýDanhSáchBànToolStripMenuItem.Size = new System.Drawing.Size(270, 28);
-            this.quảnLýDanhSáchBànToolStripMenuItem.Text = "Quản lý danh sách bàn";
-            this.quảnLýDanhSáchBànToolStripMenuItem.Click += new System.EventHandler(this.quảnLýDanhSáchBànToolStripMenuItem_Click);
-            // 
-            // quảnLýThựcĐơnToolStripMenuItem
-            // 
-            this.quảnLýThựcĐơnToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources.table;
-            this.quảnLýThựcĐơnToolStripMenuItem.Name = "quảnLýThựcĐơnToolStripMenuItem";
-            this.quảnLýThựcĐơnToolStripMenuItem.Size = new System.Drawing.Size(270, 28);
-            this.quảnLýThựcĐơnToolStripMenuItem.Text = "Quản lý thực đơn";
-            this.quảnLýThựcĐơnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýThựcĐơnToolStripMenuItem_Click);
-            // 
-            // lịchSửThanhToánToolStripMenuItem
-            // 
-            this.lịchSửThanhToánToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lịchSửThanhToánToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources.Numbers_iOS_svg_;
-            this.lịchSửThanhToánToolStripMenuItem.Name = "lịchSửThanhToánToolStripMenuItem";
-            this.lịchSửThanhToánToolStripMenuItem.Size = new System.Drawing.Size(186, 27);
-            this.lịchSửThanhToánToolStripMenuItem.Text = "Lịch sử thanh toán";
-            this.lịchSửThanhToánToolStripMenuItem.Click += new System.EventHandler(this.lịchSửThanhToánToolStripMenuItem_Click);
-            // 
-            // thoátToolStripMenuItem
-            // 
-            this.thoátToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.thoátToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources._2013_06_13_televizija_na_off_16377;
-            this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
-            this.thoátToolStripMenuItem.Text = "Đăng xuất";
-            this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
-            // 
             // thêmMónToolStripMenuItem
             // 
             this.thêmMónToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources.cart;
@@ -890,6 +833,21 @@ namespace SelfRestaurant.GUI
             this.đặtGiữBànToolStripMenuItem.Size = new System.Drawing.Size(174, 28);
             this.đặtGiữBànToolStripMenuItem.Text = "Đặt giữ bàn";
             this.đặtGiữBànToolStripMenuItem.Click += new System.EventHandler(this.đặtGiữBànToolStripMenuItem_Click);
+            // 
+            // CMSCoNguoi
+            // 
+            this.CMSCoNguoi.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CMSCoNguoi.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.CMSCoNguoi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmMónToolStripMenuItem1,
+            this.trảMónToolStripMenuItem,
+            this.chuyểnBànToolStripMenuItem,
+            this.gộpBànToolStripMenuItem,
+            this.toolStripMenuItem3,
+            this.thanhToánToolStripMenuItem,
+            this.inThửHóaĐơnToolStripMenuItem});
+            this.CMSCoNguoi.Name = "CMSCoNguoi";
+            this.CMSCoNguoi.Size = new System.Drawing.Size(200, 178);
             // 
             // thêmMónToolStripMenuItem1
             // 
@@ -923,6 +881,11 @@ namespace SelfRestaurant.GUI
             this.gộpBànToolStripMenuItem.Text = "Gộp bàn";
             this.gộpBànToolStripMenuItem.Click += new System.EventHandler(this.gộpBànToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(196, 6);
+            // 
             // thanhToánToolStripMenuItem
             // 
             this.thanhToánToolStripMenuItem.Image = global::SelfRestaurant.Properties.Resources.home_payroll_icon;
@@ -937,6 +900,16 @@ namespace SelfRestaurant.GUI
             this.inThửHóaĐơnToolStripMenuItem.Name = "inThửHóaĐơnToolStripMenuItem";
             this.inThửHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(199, 28);
             this.inThửHóaĐơnToolStripMenuItem.Text = "In thử hóa đơn";
+            // 
+            // CMSDatTruoc
+            // 
+            this.CMSDatTruoc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CMSDatTruoc.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.CMSDatTruoc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem4,
+            this.mToolStripMenuItem});
+            this.CMSDatTruoc.Name = "CMSDatTruoc";
+            this.CMSDatTruoc.Size = new System.Drawing.Size(186, 60);
             // 
             // toolStripMenuItem4
             // 
@@ -953,6 +926,39 @@ namespace SelfRestaurant.GUI
             this.mToolStripMenuItem.Size = new System.Drawing.Size(185, 28);
             this.mToolStripMenuItem.Text = "Mở khóa bàn";
             this.mToolStripMenuItem.Click += new System.EventHandler(this.mToolStripMenuItem_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.pnlTable);
+            this.panel3.Controls.Add(this.groupBox3);
+            this.panel3.Location = new System.Drawing.Point(12, 268);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(386, 419);
+            this.panel3.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::SelfRestaurant.Properties.Resources.SeflRestaurant;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(386, 222);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // fMain
             // 
@@ -1082,5 +1088,6 @@ namespace SelfRestaurant.GUI
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private Timer timer1;
     }
 }

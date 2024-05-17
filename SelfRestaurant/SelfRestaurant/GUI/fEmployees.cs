@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SelfRestaurant.GUI
@@ -148,13 +141,13 @@ namespace SelfRestaurant.GUI
                 }
                 if (flag == "Edit")
                 {
-                    NV.UpdateNhanVien(conn,DK);
+                    NV.UpdateNhanVien(conn, DK);
                     MessageBox.Show("Cập nhật thành công", "Thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loadNhanVien();
                 }
                 LockControl();
             }
-            
+
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
